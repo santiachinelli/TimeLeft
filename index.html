@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+  <head>    
+    <title>TimeLeft™</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💀</text></svg>">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <style>
+    html, body { height: 100%; }
+    body {
+    background-image: url('img/background-sky.png');
+      background-repeat: no-repeat;
+      /* background-attachment: scroll; */
+      background-size: auto auto;}
+    </style> 
+
+</head>
+
+<main>
+  <body>
+
+    <article style="  margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;">
+
+    <div x-data="{ open: true }">
+      
+   
+      <div x-show="open"> 
+        <h1 style="text-align: center;">TimeLeft™ Productivity Timer</h1>
+        <p style="text-align: center;">Ever wanted to know how many more hours of doomscrolling aimlessly you have left?<br>Now you can with TimeLeft™. </p>
+        <!-- Input Birthday -->
+        <form action="https://example.com">
+        <label>
+            <h5>When where you born?</h5>
+            <input id="birthDay" type="date" name="bday" value="1969-12-31"></input>
+        </label>
+        </form>
+        <!-- Select Gender -->
+        <label for="Sex"> 
+        <h5>
+            Sex?  
+        </h5>
+        </label>
+        <select id="theSex" required>
+        <option value="Female" selected>Female</option>
+        <option value="Male">Male</option>
+
+        </select>
+      
+      </div>
+
+      <div x-show="! open">
+        <h1><div style="text-align: center;" id="yearsleft"></div></h1>
+        <h1><div style="text-align: center;" id="demo"></div></h1>
+      </div>
+
+
+
+          <button id="theButton" x-on:click="putItAllTogether(); open = ! open ;">
+            <div x-show=" open" x-data="{ buttontext: 'Submit' }">
+               <strong x-text="buttontext"></strong>
+          </div>
+          <div x-show="! open" x-data="{ buttontext: 'Recalculate' }">
+            <strong x-text="buttontext"></strong>
+          </div>
+          </button>
+          
+          
+  </div>
+ <div><br></div>
+  <details class="container-fluid">
+    <summary>What is this?</summary>
+    <p>Change how you work by being constantly reminded that entropy is all-consuming and inescapable. Life is fleeting, make sure you're spending it wisely with TimeLeft™.</p>
+    <p style="text-align: right"> A deadly serious project by <a href="https://www.achinelli.com">SantiCorp</a></p>
+  </details>
+    </article>
+<footer>
+     
+  </footer>
+  </body>
+
+</main>
+<script src="index.js"></script>
+
+
+</html>
